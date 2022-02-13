@@ -4,4 +4,8 @@ A responsive website of Digital Bookstore that lists all of the books that are c
 
 ## Research Paper
   
-  - [Published Paper @IJRASET](https://doi.org/10.22214/ijraset.2021.36609)
+  >DIGITAL BOOKSTORE
+
+  - [Certificate](https://github.com/Amey-Thakur/ACHIEVEMENTS/blob/main/Research%20Papers/Digital%20Bookstore/IJRASET36609%20-%20Digital%20Bookstore.pdf)
+  - IJRASET | Volume 9 Issue 7 | [Published Article](https://doi.org/10.22214/ijraset.2021.36609) 
+  - viXra | [Preprint](https://vixra.org/abs/2108.0142)
