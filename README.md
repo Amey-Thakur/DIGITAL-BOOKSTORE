@@ -10,6 +10,8 @@
    - IJRASET | Volume 9 Issue 7 | [Published Article](https://doi.org/10.22214/ijraset.2021.36609) 
  
    - viXra | [Preprint](https://vixra.org/abs/2108.0142)
+   
+   - [Presentation](https://youtu.be/JuUix8olOC8)
 
 ---
 
