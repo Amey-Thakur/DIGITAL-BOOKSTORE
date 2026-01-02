@@ -1,0 +1,21 @@
+# PHP/Database
+Digital Bookstore/dbconnect.php
+Digital Bookstore/bookstore.sql
+Mini-Project/*.xlsx
+
+# OS Files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary Files
+*.tmp
+*.bak
+*.sav
+*.old

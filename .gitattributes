@@ -1,2 +1,29 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Standardized Git Attributes for Scholarly Archiving
+
+# Handle line endings automatically for files detected as text
+# and perform LF normalization on checkin.
+* text=auto eol=lf
+
+# Explicitly mark source files as text
+*.php text
+*.html text
+*.css text
+*.js text
+*.sql text
+*.md text
+
+# Mark binary files
+*.jpg binary
+*.png binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.otf binary
+*.xlsx binary
+
+# Academic/Scholarly classification
+*.md linguist-documentation
+*.xlsx linguist-documentation
