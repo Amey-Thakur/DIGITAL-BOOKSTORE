@@ -78,7 +78,7 @@ Developed as a mini-project for the **Web Designing Lab** curriculum, this syste
  |---|---|---|---|---|
  | 1 | **Project Repository** | Complete source code and documentation | May 2021 | [View](Source%20Code/) |
  | 2 | **Project Demo (YouTube)** | Real-time demonstration of features | May 2021 | [View](https://youtu.be/JuUix8olOC8) |
- | 3 | **Project Timeline** | Project execution schedule and milestones | March 2021 | [View](Mini%20Project/Project%20timeline1.xlsx) |
+ | 3 | **Project Timeline** | Project execution schedule and milestones | March 2021 | [View](Mini%20Project/Amey_B-50_Software_Engineering_Mini_Project_Timeline.pdf) |
  | 4 | **Publication Certificate** | Recognition for project excellence | July 2021 | [View](Mini%20Project/IJRASET36609%20-%20Digital%20Bookstore.pdf) |
  | 5 | **Project Diagrams & Plan** | Raw work diagrams planning for digital bookstore project | May 2021 | [View](Mini%20Project/Figures/) |
 
@@ -128,7 +128,7 @@ DIGITAL-BOOKSTORE/
 │   ├── IJRASET-V9I7 - Digital Bookstore.pdf # Published Journal Paper
 │   ├── IJRASET36609 - Digital Bookstore.pdf # Publication Certificate
 │   ├── Preprint - Digital Bookstore.pdf     # viXra Research Preprint
-│   └── Project timeline1.xlsx           # Project Execution Schedule
+│   └── Amey_B-50_Software_Engineering_Mini_Project_Timeline.pdf # Project Execution Schedule
 │
 ├── Source Code/                         # Full Stack Web Application
 │   ├── css/                             # System Stylesheets
