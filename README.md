@@ -13,7 +13,7 @@
 
   **[Source Code](Source%20Code/)** &nbsp;&middot;&nbsp; **[Technical Specification](docs/SPECIFICATION.md)** &nbsp;&middot;&nbsp; **[Video Demo](https://youtu.be/JuUix8olOC8)**
 
-  [![Demo](https://img.youtube.com/vi/JuUix8olOC8/maxresdefault.jpg)](https://youtu.be/JuUix8olOC8)
+  [![Demo](https://img.youtube.com/vi/JuUix8olOC8/0.jpg)](https://youtu.be/JuUix8olOC8)
 
 </div>
 
