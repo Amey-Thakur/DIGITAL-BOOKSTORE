@@ -1,36 +1,63 @@
-# Technical Specification: Digital Bookstore
+# Technical Specification: DIGITAL-BOOKSTORE
 
-## System Architecture
+## Architectural Overview
+The **DIGITAL-BOOKSTORE** is a professional full-stack e-commerce application implemented using the **LAMP stack** (Linux, Apache, MySQL, PHP). The architecture follows a multi-tier model where the presentation layer is decoupled from the business logic and persistent data storage.
 
-Digital Bookstore is a full-stack e-commerce application built on the LAMP stack (Linux, Apache, MySQL, PHP). It utilizes a multi-tier architecture to separate presentation, business logic, and data management.
+### Architectural Flow
 
-### 1. Presentation Layer
-- **HTML5/CSS3**: Core structure and styling using custom CSS designs.
-- **Bootstrap 3.3.6**: Responsive grid system and UI components (Modals, Carousels, Navigation).
-- **JavaScript/jQuery**: Client-side validation, asynchronous cart updates, and interactive UI elements.
+```mermaid
+graph TD
+    A["User Request (HTTP)"] -->|Captured| B["Routing & Session Layer (PHP)"]
+    B -->|Query Parameters| C["Business Logic Engine"]
+    C -->|SQL Commands| D[("MySQL Data Layer")]
+    D -->|Results| C
+    C -->|Data Context| E["Bootstrap Presentation Layer"]
+    E -->|Rendered HTML| F["Client Browser"]
+    B -.->|Session Persistent| G{"Auth State Check"}
+    G -->|Authenticated| C
+```
 
-### 2. Business Logic Layer
-- **PHP 7.4+**: Server-side scripting for session management, authentication, and database interaction.
-- **Session Management**: Secure state persistence for user login status and shopping cart data.
-- **Cart Engine**: Logic for synchronizing persistent cart data with database records.
+## 1. Program Structure
+The application logic is distributed across modular PHP scripts that manage specific lifecycle events of the user journey.
 
-### 3. Data Layer
-- **MySQL**: Relational database management system.
-- **Schema**:
-  - `users`: Stores user credentials and profile information.
-  - `products`: Metadata for all available books (ISBN, Title, Author, Price, Category).
-  - `cart`: Mapping between users and selected products with quantity tracking.
+### Core Components:
+- **Data Connectivity Layer (`dbconnect.php`)**: Establishes a persistent connection to the MySQL database using the `mysqli` extension and manages exception handling for connection failures.
+- **Authentication Subsystem (`login.php`, `register.php`)**: Implements session-based user identification, handling credential verification and registration persistence.
+- **Inventory Engine (`Product.php`, `Author.php`, `Result.php`)**: Dynamically constructs SQL queries based on user filtering (Category/Author) or search keywords and utilizes PHP to render product objects.
+- **Cart Management Layer (`cart.php`)**: A stateful engine that synchronizes user-selected products with database records, calculating metrics like MRP, Discount, and Net Total.
 
-## Technical Highlights
+## 2. Session Logic & Application States
+The application operates through a set of transactional states determined by user activity and `$_SESSION` variables.
 
-- **Dynamic Catalog**: Inventory is dynamically rendered from the database, allowing for real-time updates.
-- **Responsive Design**: Mobile-first approach ensures optimal viewing experience across devices.
-- **Search & Filtering**: Implementation of sub-string search and metric-based sorting (Price, Discount).
-- **Persistence**: Cart data is stored in the database, allowing users to resume shopping across sessions.
+| State | Trigger | Output/Action |
+|-------|---------|---------------|
+| **Anonymous Browse** | Initial Access | Home page display with Login/Signup availability. |
+| **Authentication** | Login/Registration Event | Creation of `$_SESSION['user']` and redirection to secure context. |
+| **Catalog Exploration** | Category/Search Select | Dynamic execution of `SELECT` queries with filtering/sorting. |
+| **Cart Mutation** | "Add to Cart" Action | `INSERT` or `UPDATE` operation on the persistent `cart` table. |
+| **Order Confirmation** | Cart Submission | Final calculation of order value and order record instantiation. |
 
-## Deployment Requirements
+## 3. Cart Synchronization Specification
+The cart logic employs a "Sync-on-Demand" algorithm within the `cart.php` module.
 
-- **Server**: Apache 2.4+
-- **Database**: MySQL 5.7+ / MariaDB 10.3+
-- **Environment**: PHP 7.1+ with `mysqli` extension enabled.
-- **Deployment Tool**: XAMPP / WAMP / MAMP.
+### Persistence Logic:
+1. **Entry Check**: On adding a product, the system performs a `count` check on the `cart` table for the specific `{User, Product}` tuple.
+2. **Dynamic Update**: 
+   - If tuple exists: Executes an `UPDATE` command to synchronize the new quantity.
+   - If tuple is missing: Executes an `INSERT` command to instantiate the cart record.
+3. **Calculated Fields**: Discounts and totals are calculated server-side to ensure financial integrity before rendering the final view.
+
+## 4. Input Handling & Interface
+The program employs a hybrid interaction model:
+- **Server-Side Rendering (PHP)**: Generates the core HTML structure based on database state.
+- **Client-Side Dynamics (jQuery)**: Facilitates interactive elements such as quantity selectors on the `description.php` page and real-time form validations.
+- **Responsive Grid (Bootstrap)**: Ensures the interface adapts to various viewport geometries.
+
+## 5. Data Schema
+The relational data model is comprised of three primary entities:
+- **`users`**: Stores unique character-based usernames and passwords for credential matching.
+- **`products`**: A comprehensive metadata repository for books (PID, Title, Author, Price, Category).
+- **`cart`**: A junction table mapping `Customer` identifiers to `Product` identifiers with associated `Quantity` metrics.
+
+---
+*Technical Specification | Computer Engineering Project | Version 1.0*
