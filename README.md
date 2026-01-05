@@ -274,7 +274,7 @@ Special thanks to the faculty members of the Department of Computer Engineering 
 
 <br>
 
-💻 **[Web Designing Lab](https://github.com/Amey-Thakur/WEB-DESIGNING-LAB)** &nbsp;·&nbsp; 📖 **[DIGITAL-BOOKSTORE](https://github.com/Amey-Thakur/DIGITAL-BOOKSTORE)**
+� **[Web Designing Lab](https://github.com/Amey-Thakur/WEB-DESIGNING-LAB)** &nbsp;·&nbsp; 📖 **[DIGITAL-BOOKSTORE](https://github.com/Amey-Thakur/DIGITAL-BOOKSTORE)**
 
 ---
 
