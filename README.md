@@ -130,14 +130,14 @@ DIGITAL-BOOKSTORE/
 │   │   ├── Fig. (2) Zero Level DFD.jpg                           # Context Level Data Flow Diagram
 │   │   ├── Fig. (3) First Level DFD.jpg                          # Level 1 Data Flow Diagram
 │   │   ├── Fig. (4) Second Level DFD.jpg                         # Level 2 Data Flow Diagram
-│   │   ├── Fig. (5) Class Diagram.jpg                            # Object-Oriented Class Hierarchy
-│   │   ├── Fig. (6) Sequence Diagram.jpg                         # System Interaction Timeline
-│   │   ├── Fig. (7) Collaboration Diagram.jpg                    # Object Communication Model
-│   │   ├── Fig. (8) Statechart Diagram.jpg                       # Entity State Transitions
-│   │   ├── Fig. (9) Activity Diagram.jpg                         # Operational Logic Workflow
-│   │   ├── Fig. (10) Gantt Chart.jpg                             # Project Scheduling & Milestones
-│   │   ├── Fig. (11) Use Case Diagram.jpg                        # Actor-System Interaction Model
-│   │   └── Fig. (12) Flow Graph.jpg                              # Algorithmic Complexity Graph
+│   │   ├── Fig. (5) Class Diagram.jpg                             # Object-Oriented Class Hierarchy
+│   │   ├── Fig. (6) Sequence Diagram.jpg                          # System Interaction Timeline
+│   │   ├── Fig. (7) Collaboration Diagram.jpg                     # Object Communication Model
+│   │   ├── Fig. (8) Statechart Diagram.jpg                        # Entity State Transitions
+│   │   ├── Fig. (9) Activity Diagram.jpg                          # Operational Logic Workflow
+│   │   ├── Fig. (10) Gantt Chart.jpg                              # Project Scheduling & Milestones
+│   │   ├── Fig. (11) Use Case Diagram.jpg                         # Actor-System Interaction Model
+│   │   └── Fig. (12) Flow Graph.jpg                               # Algorithmic Complexity Graph
 │   ├── Amey_B-50_Software_Engineering_Mini_Project_Timeline.pdf  # Project Execution Schedule
 │   ├── IJRASET-V9I7 - Digital Bookstore.pdf                      # Published Journal Research Paper
 │   ├── IJRASET36609 - Digital Bookstore.pdf                      # Publication Certificate
@@ -268,22 +268,22 @@ Special thanks to the faculty members of the Department of Computer Engineering 
 <!-- FOOTER -->
 <div align="center">
 
-[↑ Back to Top](#readme-top)
+  [↑ Back to Top](#readme-top)
 
-[Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
+  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
-<br>
+  <br>
 
-� **[Web Designing Lab](https://github.com/Amey-Thakur/WEB-DESIGNING-LAB)** &nbsp;·&nbsp; 📖 **[DIGITAL-BOOKSTORE](https://github.com/Amey-Thakur/DIGITAL-BOOKSTORE)**
+  🔬 **[Software Engineering Laboratory](https://github.com/Amey-Thakur/SOFTWARE-ENGINEERING-AND-SOFTWARE-ENGINEERING-LAB)** &nbsp;·&nbsp; 📚 **[Digital Bookstore](https://github.com/Amey-Thakur/DIGITAL-BOOKSTORE)**
 
----
+  ---
 
-### Presented as part of the 6th Semester Mini-Project @ Terna Engineering College
+  ### Presented as part of the 6th Semester Mini-Project @ Terna Engineering College
 
-### 🎓 [Computer Engineering Repository](https://github.com/Amey-Thakur/COMPUTER-ENGINEERING)
+  ### 🎓 [Computer Engineering Repository](https://github.com/Amey-Thakur/COMPUTER-ENGINEERING)
 
-**Computer Engineering (B.E.) - University of Mumbai**
+  **Computer Engineering (B.E.) - University of Mumbai**
 
-*Semester-wise curriculum, laboratories, projects, and academic notes.*
+  *Semester-wise curriculum, laboratories, projects, and academic notes.*
 
 </div>
