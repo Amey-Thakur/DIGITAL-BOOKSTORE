@@ -21,7 +21,7 @@
 
 <div align="center">
 
-  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
+  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Results](#system-architecture--design-gallery) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
 </div>
 
@@ -60,9 +60,9 @@
 <!-- OVERVIEW -->
 ## Overview
 
-The **DIGITAL-BOOKSTORE** is a responsive full-stack e-commerce solution developed to facilitate the systematic discovery and acquisition of literary artifacts. It integrates a relational database architecture with a dynamic frontend, providing users with a seamless shopping experience.
+The **Digital Bookstore** is a responsive full-stack e-commerce solution developed to facilitate the systematic discovery and acquisition of literary artifacts. It integrates a relational database architecture with a dynamic frontend, providing users with a seamless shopping experience.
 
-Developed as a mini-project for the **Web Designing Lab** curriculum, this system demonstrates the practical application of server-side logic (PHP), database management (MySQL), and responsive UI design (Bootstrap).
+Developed as a mini-project for the **Software Engineering Laboratory** curriculum, this system demonstrates the practical application of server-side logic (PHP), database management (MySQL), and responsive UI design (Bootstrap).
 
 > [!IMPORTANT]
 > **Research Impact**
@@ -132,12 +132,12 @@ DIGITAL-BOOKSTORE/
 │   │   ├── Fig. (4) Second Level DFD.jpg                         # Level 2 Data Flow Diagram
 │   │   ├── Fig. (5) Class Diagram.jpg                             # Object-Oriented Class Hierarchy
 │   │   ├── Fig. (6) Sequence Diagram.jpg                          # System Interaction Timeline
-│   │   ├── Fig. (7) Collaboration Diagram.jpg                     # Object Communication Model
-│   │   ├── Fig. (8) Statechart Diagram.jpg                        # Entity State Transitions
-│   │   ├── Fig. (9) Activity Diagram.jpg                          # Operational Logic Workflow
-│   │   ├── Fig. (10) Gantt Chart.jpg                              # Project Scheduling & Milestones
-│   │   ├── Fig. (11) Use Case Diagram.jpg                         # Actor-System Interaction Model
-│   │   └── Fig. (12) Flow Graph.jpg                               # Algorithmic Complexity Graph
+│   │   ├── Fig. (7) Collaboration Diagram.jpg                    # Object Communication Model
+│   │   ├── Fig. (8) Statechart Diagram.jpg                       # Entity State Transitions
+│   │   ├── Fig. (9) Activity Diagram.jpg                         # Operational Logic Workflow
+│   │   ├── Fig. (10) Gantt Chart.jpg                             # Project Scheduling & Milestones
+│   │   ├── Fig. (11) Use Case Diagram.jpg                        # Actor-System Interaction Model
+│   │   └── Fig. (12) Flow Graph.jpg                              # Algorithmic Complexity Graph
 │   ├── Amey_B-50_Software_Engineering_Mini_Project_Timeline.pdf  # Project Execution Schedule
 │   ├── IJRASET-V9I7 - Digital Bookstore.pdf                      # Published Journal Research Paper
 │   ├── IJRASET36609 - Digital Bookstore.pdf                      # Publication Certificate
@@ -190,6 +190,54 @@ DIGITAL-BOOKSTORE/
 ├── README.md                                                     # Comprehensive Archival Entrance
 └── SECURITY.md                                                   # Vulnerability Exposure Policy
 ```
+
+---
+
+<!-- RESULTS -->
+## System Architecture & Design Gallery
+
+<div align="center">
+
+  ### Process Model (SDLC)
+  ![Process Model](Mini%20Project/Figures/Fig.%20(1)%20Process%20Model.png)
+
+  ### Context Level Data Flow Diagram (Zero Level DFD)
+  ![Zero Level DFD](Mini%20Project/Figures/Fig.%20(2)%20Zero%20Level%20DFD.jpg)
+
+  ### First Level Data Flow Diagram (Level 1 DFD)
+  ![First Level DFD](Mini%20Project/Figures/Fig.%20(3)%20First%20Level%20DFD.jpg)
+
+  ### Second Level Data Flow Diagram (Level 2 DFD)
+  ![Second Level DFD](Mini%20Project/Figures/Fig.%20(4)%20Second%20Level%20DFD.jpg)
+
+  ### Class Diagram
+  ![Class Diagram](Mini%20Project/Figures/Fig.%20(5)%20Class%20Diagram.jpg)
+
+  ### Sequence Diagram
+  ![Sequence Diagram](Mini%20Project/Figures/Fig.%20(6)%20Sequence%20Diagram.jpg)
+
+  ### Collaboration Diagram
+  ![Collaboration Diagram](Mini%20Project/Figures/Fig.%20(7)%20Collaboration%20Diagram.jpg)
+
+  ### Statechart Diagram
+  ![Statechart Diagram](Mini%20Project/Figures/Fig.%20(8)%20Statechart%20Diagram.jpg)
+
+  ### Activity Diagram
+  ![Activity Diagram](Mini%20Project/Figures/Fig.%20(9)%20Activity%20Diagram.jpg)
+
+  ### Project Scheduling (Gantt Chart)
+  ![Gantt Chart](Mini%20Project/Figures/Fig.%20(10)%20Gantt%20Chart.jpg)
+
+  ### Use Case Diagram
+  ![Use Case Diagram](Mini%20Project/Figures/Fig.%20(11)%20Use%20Case%20Diagram.jpg)
+
+  ### Algorithmic Complexity (Flow Graph)
+  ![Flow Graph](Mini%20Project/Figures/Fig.%20(12)%20Flow%20Graph.jpg)
+
+  ### Relational Schema (Database Tables)
+  ![Database Tables](Mini%20Project/Figures/Database%20Tables.jpg)
+
+</div>
 
 ---
 
@@ -253,7 +301,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **Institution**: [Terna Engineering College](https://ternaengg.ac.in/), Navi Mumbai  
 **University**: [University of Mumbai](https://mu.ac.in/)
 
-This project features the **DIGITAL-BOOKSTORE**, a web-based e-commerce utility developed as a **6th Semester Mini-Project**. It explores the synergy between dynamic web interfaces and relational data management in a commercial context.
+This project features the **Digital Bookstore**, a web-based e-commerce utility developed as a **6th Semester Mini-Project**. It explores the synergy between dynamic web interfaces and relational data management in a commercial context.
 
 **Connect**: [GitHub](https://github.com/Amey-Thakur) · [LinkedIn](https://www.linkedin.com/in/amey-thakur)
 
@@ -270,7 +318,7 @@ Special thanks to the faculty members of the Department of Computer Engineering 
 
   [↑ Back to Top](#readme-top)
 
-  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
+  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Results](#system-architecture--design-gallery) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
   <br>
 
