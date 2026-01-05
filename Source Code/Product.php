@@ -3,6 +3,7 @@
  * DIGITAL-BOOKSTORE
  *
  * Category-based product catalog and dynamic inventory display layer.
+ * Facilitates hierarchical browsing and metric-based filtering of books.
  *
  * @category   Full Stack Web Application
  * @package    Digital Bookstore Management System
@@ -29,7 +30,7 @@ if (!isset($_SESSION['user']))
     <meta name="description" content="Books">
     <meta name="author" content="Amey Thakur">
     <title>Digital Bookstore</title>
-    <!-- Bootstrap -->
+    <!-- Bootstrap Core Framework -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/my.css" rel="stylesheet">
 
@@ -80,6 +81,10 @@ if (!isset($_SESSION['user']))
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <?php
+                    /**
+                     * Navigation State Control
+                     * Dynamically renders secure navigation options for authenticated sessions.
+                     */
                     if (isset($_SESSION['user'])) {
                         echo '
                     <li><a href="cart.php" class="btn btn-md"><span class="glyphicon glyphicon-shopping-cart">Cart</span></a></li>
@@ -105,10 +110,16 @@ if (!isset($_SESSION['user']))
 
         <?php
         include "dbconnect.php";
+
+        /**
+         * Category Persistence
+         * Synchronizes the requested category with the session state.
+         */
         if (isset($_GET['value'])) {
             $_SESSION['category'] = $_GET['value'];
         }
         $category = $_SESSION['category'];
+
         /**
          * Inventory Sorting Subsystem
          * Implements dynamic SQL query construction to facilitate user-defined 
@@ -140,6 +151,7 @@ if (!isset($_SESSION['user']))
             $query = "SELECT * FROM products WHERE Category='$category'";
             $result = mysqli_query($con, $query) or die(mysqli_error($con));
         }
+
         $i = 0;
         echo '<div class="container-fluid" id="books">
         <div class="row">
@@ -166,6 +178,10 @@ if (!isset($_SESSION['user']))
               </div>
         </div>';
 
+        /**
+         * Product Rendering Engine
+         * Iterates through the sanitized result set to generate grid-based product cards.
+         */
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $path = "img/books/" . $row['PID'] . ".jpg";
@@ -196,20 +212,9 @@ if (!isset($_SESSION['user']))
 
 
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- Script Dependencies -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
-<!--
-<script>
-$('#my_select').change(function() {
-   // assign the value to a variable, so you can test to see if it is working
-    var selectVal = $('#my_select :selected').val();
-    alert(selectVal);
-});
-</script>
-
--->
