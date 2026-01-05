@@ -2,8 +2,8 @@
 /**
  * DIGITAL-BOOKSTORE
  *
- * Dynamic filtering and presentation layer for author-specific inventory.
- * Implements sorting algorithms based on price and discount metrics.
+ * View module for rendering books filtered by a specific author.
+ * Implements dynamic sorting and presentation of author-specific inventory.
  *
  * @category   Full Stack Web Application
  * @package    Digital Bookstore Management System
@@ -79,6 +79,10 @@ if (!isset($_SESSION['user']))
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <?php
+                    /**
+                     * Session Navigation Control
+                     * Renders user-specific navigation elements (Cart, Logout) if authenticated.
+                     */
                     if (isset($_SESSION['user'])) {
                         echo '
                     <li><a href="cart.php" class="btn btn-md"><span class="glyphicon glyphicon-shopping-cart">Cart</span></a></li>
@@ -105,14 +109,21 @@ if (!isset($_SESSION['user']))
 
         <?php
         include "dbconnect.php";
+        
+        /**
+         * State Persistence
+         * Captures the requested author identifier and persists it in the session 
+         * to allow for consistent filtering during sorting operations.
+         */
         if (isset($_GET['value'])) {
             $_SESSION['author'] = $_GET['value'];
         }
         $author = $_SESSION['author'];
+
         /**
          * Sorting Engine Logic
          * Dynamically constructs SQL queries based on user-selected criteria.
-         * Supports both ascending and descending order for Price and Discount fields.
+         * Implements multi-attribute sorting for Price metrics and Discount percentages.
          */
         if (isset($_POST['sort'])) {
             if ($_POST['sort'] == "price") {
@@ -131,9 +142,11 @@ if (!isset($_SESSION['user']))
                             $query = "SELECT * FROM products WHERE Author='$author' ORDER BY Discount";
                             $result = mysqli_query($con, $query) or die(mysqli_error($con));
                         }
-        } else
+        } else {
             $query = "SELECT * FROM products WHERE Author='$author'";
-        $result = mysqli_query($con, $query) or die(mysql_error());
+            $result = mysqli_query($con, $query) or die(mysqli_error($con));
+        }
+
         $i = 0;
         echo '<div class="container-fluid" id="books">
         <div class="row">
@@ -145,8 +158,8 @@ if (!isset($_SESSION['user']))
              <div class="row">
                   <div class="col-sm-5 col-sm-offset-6 col-md-5 col-md-offset-7 col-lg-4 col-lg-offset-8">
                        <form action="';
-        echo $_SERVER['PHP_SELF'];
-        echo '" method="post" class="pull-right">
+                        echo $_SERVER['PHP_SELF'];
+                        echo '" method="post" class="pull-right">
                            <label for="sort">Sort by &nbsp: &nbsp</label>
                             <select name="sort" onchange="form.submit()">
                                 <option value="default" name="default"  selected="selected">Select</option>
@@ -160,6 +173,11 @@ if (!isset($_SESSION['user']))
               </div>
         </div>';
 
+        /**
+         * Data Presentation Layer
+         * Iterates through the result set to render responsive product cards.
+         * Handles dynamic path generation for book imagery.
+         */
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
                 $path = "img/books/" . $row['PID'] . ".jpg";
