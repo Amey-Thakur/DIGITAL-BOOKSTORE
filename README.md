@@ -107,51 +107,88 @@ Developed as a mini-project for the **Web Designing Lab** curriculum, this syste
 <!-- STRUCTURE -->
 ## Project Structure
 
-```
+```bash
 DIGITAL-BOOKSTORE/
 │
-├── docs/                                # Formal Documentation
-│   └── SPECIFICATION.md                 # Technical Architecture & Spec
+├── docs/                                    # Formal Documentation
+│   └── SPECIFICATION.md                     # Technical Architecture & Spec
 │
-├── Mega/                                # Media & Identity Assets
-│   ├── Mega.png                         # Author Profile Image
-│   ├── Mega_Professional.jpg            # Author Professional Photo
-│   └── ...                              # Integrated Visual Resources
+├── Mega/                                    # Media & Identity Assets
+│   ├── Filly.jpg                            # Project-related Content Asset
+│   ├── Mega.png                             # Author Profile Image (Mega Satish)
+│   ├── Mega_Chair.png                       # Author Profile Context
+│   ├── Mega_Dining.jpg                      # Author Personal Context
+│   ├── Mega_Professional.jpg                # Author Professional Portrait
+│   └── Mega_and_Hetvi.png                   # Collaborative Identity Asset
 │
-├── Mini Project/                        # Research & Academic Assets
-│   ├── Draft/                           # Preliminary Research Data
-│   │   └── DIGITAL BOOKSTORE.docx       # Working Manuscript Draft
-│   ├── Figures/                         # System Diagrams & Visualizations
-│   │   ├── Database Tables.jpg          # Relational Schema Visualization
-│   │   ├── Fig. (1) Process Model.png   # SDLC Process Representation
-│   │   └── ...                          # UML & Architectural Diagrams
-│   ├── IJRASET-V9I7 - Digital Bookstore.pdf # Published Journal Paper
-│   ├── IJRASET36609 - Digital Bookstore.pdf # Publication Certificate
-│   ├── Preprint - Digital Bookstore.pdf     # viXra Research Preprint
-│   └── Amey_B-50_Software_Engineering_Mini_Project_Timeline.pdf # Project Execution Schedule
+├── Mini Project/                            # Research & Academic Assets
+│   ├── Draft/                               # Preliminary Research Data
+│   │   └── DIGITAL BOOKSTORE.docx           # Working Manuscript Draft
+│   ├── Figures/                             # System Diagrams & Visualizations
+│   │   ├── Database Tables.jpg              # Relational Schema Visualization
+│   │   ├── Fig. (1) Process Model.png       # SDLC Process Representation
+│   │   ├── Fig. (2) Zero Level DFD.jpg      # Context Level Data Flow Diagram
+│   │   ├── Fig. (3) First Level DFD.jpg     # Level 1 Data Flow Diagram
+│   │   ├── Fig. (4) Second Level DFD.jpg    # Level 2 Data Flow Diagram
+│   │   ├── Fig. (5) Class Diagram.jpg        # Object-Oriented Class Hierarchy
+│   │   ├── Fig. (6) Sequence Diagram.jpg     # System Interaction Timeline
+│   │   ├── Fig. (7) Collaboration Diagram.jpg # Object Communication Model
+│   │   ├── Fig. (8) Statechart Diagram.jpg   # Entity State Transitions
+│   │   ├── Fig. (9) Activity Diagram.jpg     # Operational Logic Workflow
+│   │   ├── Fig. (10) Gantt Chart.jpg         # Project Scheduling & Milestones
+│   │   ├── Fig. (11) Use Case Diagram.jpg    # Actor-System Interaction Model
+│   │   └── Fig. (12) Flow Graph.jpg          # Algorithmic Complexity Graph
+│   ├── Amey_B-50_Software_Engineering_Mini_Project_Timeline.pdf # Formal Schedule
+│   ├── IJRASET-V9I7 - Digital Bookstore.pdf # Published Journal Research Paper
+│   ├── IJRASET36609 - Digital Bookstore.pdf # Institutional Publication Certificate
+│   └── Preprint - Digital Bookstore.pdf     # Scholarly preprint version (viXra)
 │
-├── Source Code/                         # Full Stack Web Application
-│   ├── css/                             # System Stylesheets
-│   ├── fonts/                           # Typography & Vector Icons
-│   ├── img/                             # UI Imagery & Static Assets
-│   ├── js/                              # Functional Client-Side Scripts
-│   ├── Author.php                       # Contributor-Specific Views
-│   ├── bookstore.sql                    # Relational Database Schema
-│   ├── cart.php                         # Shopping Cart Orchestration
-│   ├── dbconnect.php                    # Persistence Layer Liaison
-│   ├── description.php                  # Artifact Presentation Layer
-│   ├── index.php                        # Application Gateway
-│   ├── Product.php                      # Taxonomy-Based Discovery
-│   ├── query.php                        # Inquiry Dispatch Pipeline
-│   └── ...                              # Authentication & Session Modules
+├── Source Code/                             # Full Stack Web Application
+│   ├── css/                                 # Presentation Layer Stylesheets
+│   │   ├── bootstrap-theme.css              # Supplemental Bootstrap Styling
+│   │   ├── bootstrap.css                    # Core Bootstrap CSS Framework
+│   │   ├── my.css                           # Custom Scholarly UI Styling
+│   │   └── ...                              # Mapping & Minified CSS Assets
+│   ├── fonts/                               # Typography & Iconography Assets
+│   │   ├── glyphicons-halflings-regular.eot # Halflings EOT Asset
+│   │   ├── glyphicons-halflings-regular.svg # Halflings SVG Asset
+│   │   ├── glyphicons-halflings-regular.ttf # Halflings TTF Asset
+│   │   ├── glyphicons-halflings-regular.woff # Halflings WOFF Asset
+│   │   └── glyphicons-halflings-regular.woff2 # Halflings WOFF2 Asset
+│   ├── img/                                 # UI Imagery & Inventory Assets
+│   │   ├── books/                           # Product Metadata Imagery
+│   │   ├── carousel/                        # Landing Page Visual Assets
+│   │   ├── new/                             # Recent Acquisition Thumbnails
+│   │   ├── offers/                          # Promotional Campaign Imagery
+│   │   ├── popular-author/                  # Contributor Identity Assets
+│   │   ├── social/                          # Institutional Media Icons
+│   │   ├── logo.jpg                         # Platform Identity Logo
+│   │   ├── orange-flag.png                  # UI Notification Component
+│   │   └── tag.png                          # Metadata Taxonomy Icon
+│   ├── js/                                  # Client-Side Logic & Libraries
+│   │   ├── bootstrap.js                     # Bootstrap Interface Logic
+│   │   ├── bootstrap.min.js                 # Minified Interface Logic
+│   │   └── npm.js                           # Node Package Entry Point
+│   ├── Author.php                           # Contributor-Specific Discovery
+│   ├── Product.php                          # Taxonomy-Based Inventory View
+│   ├── Result.php                           # Search Orchestration Layer
+│   ├── bookstore.sql                        # Relational Database Schema
+│   ├── cart.php                             # Shopping Cart Persistence
+│   ├── dbconnect.php                        # Database Connection Liaison
+│   ├── description.php                      # Artifact Detailed Presentation
+│   ├── destroy.php                          # Session Lifecycle Termination
+│   ├── index.php                            # Application Entry Gateway
+│   ├── login.php                            # Identity Authentication Logic
+│   ├── query.php                            # Inquiry Dispatch Pipeline
+│   └── register.php                         # User Identity Provisioning
 │
-├── .gitattributes                       # Global Git Configuration
-├── .gitignore                           # Asset Exclusion Manifest
-├── CITATION.cff                         # Academic Citation Metadata
-├── codemeta.json                        # Software Metadata Metadata
-├── LICENSE                              # Project Licensing Terms
-├── README.md                            # Comprehensive Documentation
-└── SECURITY.md                          # Cybersecurity Protocol
+├── .gitattributes                           # Global Git LFS & Endpoint Config
+├── .gitignore                               # Asset Exclusion Manifest
+├── CITATION.cff                             # Scholarly Citation Metadata
+├── codemeta.json                            # Machine-Readable Project Metadata
+├── LICENSE                                  # Project Licensing Terms (MIT)
+├── README.md                                # Comprehensive Archival Entrance
+└── SECURITY.md                              # Vulnerability Exposure Policy
 ```
 
 ---
