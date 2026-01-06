@@ -83,6 +83,11 @@ Developed as a mini-project for the **Software Engineering Laboratory** curricul
  | 4 | **Publication Certificate** | Recognition for project excellence | July 2021 | [View](Mini-Project/IJRASET36609%20-%20Digital%20Bookstore.pdf) |
  | 5 | **Project Diagrams & Plan** | Raw work diagrams planning for digital bookstore project | May 2021 | [View](Mini-Project/Figures/) |
 
+> [!TIP]
+> **Database Interaction Efficiency**
+>
+> To optimize search responsiveness and prevent SQL bottlenecks, ensure that the `books` table is indexed on `book_title` and `author_name`. This significantly enhances retrieval speeds during high-concurrency discovery operations in the storefront.
+
 ---
 
 <!-- FEATURES -->
@@ -102,11 +107,6 @@ Developed as a mini-project for the **Software Engineering Laboratory** curricul
 - **Database**: MySQL 5.x+
 - **Frontend**: HTML5, CSS3, Bootstrap 3.3.6, jQuery
 - **Server**: Apache (XAMPP/WAMP)
-
-> [!TIP]
-> **Database Interaction Efficiency**
->
-> To optimize search responsiveness and prevent SQL bottlenecks, ensure that the `books` table is indexed on `book_title` and `author_name`. This significantly enhances retrieval speeds during high-concurrency discovery operations in the storefront.
 
 ---
 
