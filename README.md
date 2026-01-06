@@ -78,9 +78,9 @@ Developed as a mini-project for the **Software Engineering Laboratory** curricul
  |---|---|---|---|---|
  | 1 | **Project Repository** | Complete source code and documentation | May 2021 | [View](Source%20Code/) |
  | 2 | **Project Demo (YouTube)** | Real-time demonstration of features | May 2021 | [View](https://youtu.be/JuUix8olOC8) |
- | 3 | **Project Timeline** | Project execution schedule and milestones | March 2021 | [View](Mini%20Project/Amey_B-50_Software_Engineering_Mini_Project_Timeline.pdf) |
- | 4 | **Publication Certificate** | Recognition for project excellence | July 2021 | [View](Mini%20Project/IJRASET36609%20-%20Digital%20Bookstore.pdf) |
- | 5 | **Project Diagrams & Plan** | Raw work diagrams planning for digital bookstore project | May 2021 | [View](Mini%20Project/Figures/) |
+ | 3 | **Project Timeline** | Project execution schedule and milestones | March 2021 | [View](Mini-Project/Amey_B-50_Software_Engineering_Mini_Project_Timeline.pdf) |
+ | 4 | **Publication Certificate** | Recognition for project excellence | July 2021 | [View](Mini-Project/IJRASET36609%20-%20Digital%20Bookstore.pdf) |
+ | 5 | **Project Diagrams & Plan** | Raw work diagrams planning for digital bookstore project | May 2021 | [View](Mini-Project/Figures/) |
 
 ---
 
@@ -102,6 +102,11 @@ Developed as a mini-project for the **Software Engineering Laboratory** curricul
 - **Frontend**: HTML5, CSS3, Bootstrap 3.3.6, jQuery
 - **Server**: Apache (XAMPP/WAMP)
 
+> [!TIP]
+> **Database Interaction Efficiency**
+>
+> To optimize search responsiveness and prevent SQL bottlenecks, ensure that the `books` table is indexed on `book_title` and `author_name`. This significantly enhances retrieval speeds during high-concurrency discovery operations in the storefront.
+
 ---
 
 <!-- STRUCTURE -->
@@ -121,7 +126,7 @@ DIGITAL-BOOKSTORE/
 │   ├── Mega_Professional.jpg                                     # Author Professional Portrait
 │   └── Mega_and_Hetvi.png                                        # Collaborative Identity Asset
 │
-├── Mini Project/                                                 # Research & Academic Assets
+├── Mini-Project/                                                 # Research & Academic Assets
 │   ├── Draft/                                                    # Preliminary Research Data
 │   │   └── DIGITAL BOOKSTORE.docx                                # Working Manuscript Draft
 │   ├── Figures/                                                  # System Diagrams & Visualizations
@@ -199,43 +204,43 @@ DIGITAL-BOOKSTORE/
 <div align="center">
 
   ### Process Model (SDLC)
-  ![Process Model](Mini%20Project/Figures/Fig.%20(1)%20Process%20Model.png)
+  ![Process Model](Mini-Project/Figures/Fig.%20(1)%20Process%20Model.png)
 
   ### Context Level Data Flow Diagram (Zero Level DFD)
-  ![Zero Level DFD](Mini%20Project/Figures/Fig.%20(2)%20Zero%20Level%20DFD.jpg)
+  ![Zero Level DFD](Mini-Project/Figures/Fig.%20(2)%20Zero%20Level%20DFD.jpg)
 
   ### First Level Data Flow Diagram (Level 1 DFD)
-  ![First Level DFD](Mini%20Project/Figures/Fig.%20(3)%20First%20Level%20DFD.jpg)
+  ![First Level DFD](Mini-Project/Figures/Fig.%20(3)%20First%20Level%20DFD.jpg)
 
   ### Second Level Data Flow Diagram (Level 2 DFD)
-  ![Second Level DFD](Mini%20Project/Figures/Fig.%20(4)%20Second%20Level%20DFD.jpg)
+  ![Second Level DFD](Mini-Project/Figures/Fig.%20(4)%20Second%20Level%20DFD.jpg)
 
   ### Class Diagram
-  ![Class Diagram](Mini%20Project/Figures/Fig.%20(5)%20Class%20Diagram.jpg)
+  ![Class Diagram](Mini-Project/Figures/Fig.%20(5)%20Class%20Diagram.jpg)
 
   ### Sequence Diagram
-  ![Sequence Diagram](Mini%20Project/Figures/Fig.%20(6)%20Sequence%20Diagram.jpg)
+  ![Sequence Diagram](Mini-Project/Figures/Fig.%20(6)%20Sequence%20Diagram.jpg)
 
   ### Collaboration Diagram
-  ![Collaboration Diagram](Mini%20Project/Figures/Fig.%20(7)%20Collaboration%20Diagram.jpg)
+  ![Collaboration Diagram](Mini-Project/Figures/Fig.%20(7)%20Collaboration%20Diagram.jpg)
 
   ### Statechart Diagram
-  ![Statechart Diagram](Mini%20Project/Figures/Fig.%20(8)%20Statechart%20Diagram.jpg)
+  ![Statechart Diagram](Mini-Project/Figures/Fig.%20(8)%20Statechart%20Diagram.jpg)
 
   ### Activity Diagram
-  ![Activity Diagram](Mini%20Project/Figures/Fig.%20(9)%20Activity%20Diagram.jpg)
+  ![Activity Diagram](Mini-Project/Figures/Fig.%20(9)%20Activity%20Diagram.jpg)
 
   ### Project Scheduling (Gantt Chart)
-  ![Gantt Chart](Mini%20Project/Figures/Fig.%20(10)%20Gantt%20Chart.jpg)
+  ![Gantt Chart](Mini-Project/Figures/Fig.%20(10)%20Gantt%20Chart.jpg)
 
   ### Use Case Diagram
-  ![Use Case Diagram](Mini%20Project/Figures/Fig.%20(11)%20Use%20Case%20Diagram.jpg)
+  ![Use Case Diagram](Mini-Project/Figures/Fig.%20(11)%20Use%20Case%20Diagram.jpg)
 
   ### Algorithmic Complexity (Flow Graph)
-  ![Flow Graph](Mini%20Project/Figures/Fig.%20(12)%20Flow%20Graph.jpg)
+  ![Flow Graph](Mini-Project/Figures/Fig.%20(12)%20Flow%20Graph.jpg)
 
   ### Relational Schema (Database Tables)
-  ![Database Tables](Mini%20Project/Figures/Database%20Tables.jpg)
+  ![Database Tables](Mini-Project/Figures/Database%20Tables.jpg)
 
 </div>
 
@@ -250,6 +255,11 @@ Ensure your local development environment meets the following requirements:
 - **PHP**: Version **7.x** or higher.
 - **Database**: MySQL **5.x** or higher.
 - **Browser**: Current production-grade web browser (Chrome, Firefox, Safari).
+
+> [!WARNING]
+> **Legacy Dependencies & Security**
+>
+> This system is built using **PHP 7.x** and **Bootstrap 3**. For stable execution and educational reference, it is recommended to run this in a controlled local environment (e.g., XAMPP/WAMP) to align with the baseline server-side scripting and frontend framework requirements.
 
 ### 2. Setup & Deployment
 1.  **Clone the Repository**:
