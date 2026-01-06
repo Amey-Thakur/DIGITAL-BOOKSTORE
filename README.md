@@ -67,10 +67,11 @@ Developed as a mini-project for the **Software Engineering Laboratory** curricul
 > [!IMPORTANT]
 > **Research Impact**
 >
-> This project was published as a research paper in **International Journal for Research in Applied Science and Engineering Technology (IJRASET)** (Volume 9, Issue 7) and is also available as a preprint on **viXra**.
+> This project was published as a research paper in **International Journal for Research in Applied Science and Engineering Technology (IJRASET)** (Volume 9, Issue 7) and is also available as a preprint on **viXra**. The project received an official **Publication Certificate** for its research contribution to software engineering education.
 >
 > - [Preprint @viXra](https://vixra.org/abs/2108.0142)
 > - [Published Paper @IJRASET](https://doi.org/10.22214/ijraset.2021.36609)
+> - [Publication Certificate](Mini-Project/IJRASET36609%20-%20Digital%20Bookstore.pdf)
 
  ### Resources
 
