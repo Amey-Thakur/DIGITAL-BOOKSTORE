@@ -1,7 +1,7 @@
-# Technical Specification: DIGITAL-BOOKSTORE
+# Technical Specification: Digital Bookstore
 
 ## Architectural Overview
-The **DIGITAL-BOOKSTORE** is a professional full-stack e-commerce application implemented using the **LAMP stack** (Linux, Apache, MySQL, PHP). The architecture follows a multi-tier model where the presentation layer is decoupled from the business logic and persistent data storage.
+The **Digital Bookstore** is a professional full-stack e-commerce application implemented using the **LAMP stack** (Linux, Apache, MySQL, PHP). The architecture follows a multi-tier model where the presentation layer is decoupled from the business logic and persistent data storage.
 
 ### Architectural Flow
 
