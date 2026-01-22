@@ -326,6 +326,172 @@
             color: #8b949e;
             font-size: 12px;
         }
+
+        /* MacBook Frame Styles */
+        .macbook-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 60px 0;
+            padding: 0 20px;
+            perspective: 2000px;
+        }
+
+        .macbook {
+            width: 100%;
+            max-width: 800px;
+            /* 16-inch size feel */
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.27);
+        }
+
+        .macbook:hover {
+            transform: scale(1.02) translateY(-5px) rotateX(1deg);
+        }
+
+        .macbook .screen {
+            background: #0d1117;
+            border-radius: 12px 12px 0 0;
+            /* Boxier top corners */
+            border: 1px solid #30363d;
+            border-bottom: none;
+            position: relative;
+            padding: 8px 8px 0 8px;
+            /* Ultra-thin bezels */
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        .macbook .viewport {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio - Standard for YouTube */
+            height: 0;
+            background: #000;
+            border-radius: 2px 2px 0 0;
+            overflow: hidden;
+        }
+
+        .macbook .viewport iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .macbook .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 20px;
+            background: #0d1117;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            z-index: 20;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #000;
+            border-top: none;
+        }
+
+        .macbook .notch::after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: #1f242c;
+            border-radius: 50%;
+            box-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+        }
+
+        .macbook .base {
+            background: #161b22;
+            height: 24px;
+            width: 120%;
+            margin-left: -10%;
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            z-index: 9;
+            border: 1px solid #30363d;
+            border-top: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .macbook .base::after {
+            /* Notch indentation on base */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15%;
+            height: 6px;
+            background: #30363d;
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        }
+
+        #loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(88, 166, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--accent);
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 15px;
+        }
+
+        .loader-content p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -345,6 +511,24 @@
         <a href="https://doi.org/10.22214/ijraset.2021.36609" target="_blank" class="paper-banner">
             <p>📄 Published in IJRASET (Vol 9, Issue 7) — Click to View Paper</p>
         </a>
+
+        <!-- Video Demo -->
+        <div class="section">
+            <h2>🎥 Project Demo</h2>
+            <div class="macbook-wrapper">
+                <div class="macbook">
+                    <div class="screen">
+                        <div class="viewport">
+                            <iframe src="https://www.youtube.com/embed/JuUix8olOC8" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="base"></div>
+                    <div class="notch"></div>
+                </div>
+            </div>
+        </div>
 
         <!-- System Architecture -->
         <div class="section">
@@ -416,7 +600,22 @@
         <p class="lightbox-hint">Use ← → arrow keys to navigate · ESC to close</p>
     </div>
 
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p>Loading Digital Bookstore...</p>
+        </div>
+    </div>
+
     <script>
+        // Hide loading screen when page is fully loaded
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.getElementById('loading-screen').classList.add('hidden');
+            }, 800); // Slight delay for premium feel
+        });
+
         // Collect all gallery images
         const images = Array.from(document.querySelectorAll('.card img'));
         let currentIndex = 0;
