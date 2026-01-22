@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Bookstore | Amey & Mega</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-card: #161b22;
+            --border-color: #30363d;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent: #58a6ff;
+            --success: #238636;
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f6f8fa;
+            --bg-card: #ffffff;
+            --border-color: #d0d7de;
+            --text-primary: #24292f;
+            --text-secondary: #57606a;
+            --accent: #0969da;
+            --success: #1a7f37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .header .subtitle {
+            margin-top: 8px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            z-index: 100;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            color: var(--accent);
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .card h3 {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(88, 166, 255, 0.3);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .paper-banner {
+            display: block;
+            background: linear-gradient(135deg, var(--success) 0%, #2ea043 100%);
+            border-radius: 10px;
+            padding: 18px 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .paper-banner:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(35, 134, 54, 0.5);
+        }
+
+        .paper-banner p {
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tech-badge {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .lightbox-close:hover {
+            color: #ff7b72;
+        }
+
+        .lightbox-caption {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 50px;
+            color: #fff;
+            cursor: pointer;
+            padding: 20px;
+            user-select: none;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .lightbox-nav:hover {
+            color: var(--accent);
+            transform: translateY(-50%) scale(1.2);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .lightbox-download {
+            position: absolute;
+            bottom: 30px;
+            background: var(--accent);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .lightbox-download:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(88, 166, 255, 0.4);
+        }
+
+        .lightbox-hint {
+            position: absolute;
+            bottom: 80px;
+            color: #8b949e;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+        <span id="theme-icon">🌙</span>
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <h1>📚 Digital Bookstore</h1>
+            <p>Web-Based E-Commerce Platform</p>
+            <p class="subtitle">Presented as part of the 6th Semester Mini-Project @ Terna Engineering College</p>
+        </div>
+
+        <a href="https://doi.org/10.22214/ijraset.2021.36609" target="_blank" class="paper-banner">
+            <p>📄 Published in IJRASET (Vol 9, Issue 7) — Click to View Paper</p>
+        </a>
+
+        <!-- System Architecture -->
+        <div class="section">
+            <h2>📐 System Architecture & Design</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Process Model (SDLC)</h3>
+                    <img src="Mini-Project/Figures/Fig.%20(1)%20Process%20Model.png" alt="Process Model"
+                        data-title="Process Model (SDLC)" onclick="openLightbox(this)">
+                </div>
+                <div class="card">
+                    <h3>Context Level DFD</h3>
+                    <img src="Mini-Project/Figures/Fig.%20(2)%20Zero%20Level%20DFD.jpg" alt="Context Level DFD"
+                        data-title="Context Level DFD (Zero Level)" onclick="openLightbox(this)">
+                </div>
+                <div class="card">
+                    <h3>Class Diagram</h3>
+                    <img src="Mini-Project/Figures/Fig.%20(5)%20Class%20Diagram.jpg" alt="Class Diagram"
+                        data-title="Class Diagram" onclick="openLightbox(this)">
+                </div>
+                <div class="card">
+                    <h3>Database Design</h3>
+                    <img src="Mini-Project/Figures/Database%20Tables.jpg" alt="Database Tables"
+                        data-title="Relational Database Schema" onclick="openLightbox(this)">
+                </div>
+                <div class="card">
+                    <h3>Statechart Diagram</h3>
+                    <img src="Mini-Project/Figures/Fig.%20(8)%20Statechart%20Diagram.jpg" alt="Statechart Diagram"
+                        data-title="Statechart Diagram" onclick="openLightbox(this)">
+                </div>
+                <div class="card">
+                    <h3>Activity Diagram</h3>
+                    <img src="Mini-Project/Figures/Fig.%20(9)%20Activity%20Diagram.jpg" alt="Activity Diagram"
+                        data-title="Activity Diagram" onclick="openLightbox(this)">
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="card">
+            <h2 style="color:var(--accent);text-align:center;margin-bottom:15px;">Tech Stack</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">🐘 PHP 7.x</span>
+                <span class="tech-badge">🗄️ MySQL</span>
+                <span class="tech-badge">🅱️ Bootstrap 3</span>
+                <span class="tech-badge">📜 jQuery</span>
+                <span class="tech-badge">🌐 Apache</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>
+                <a href="https://github.com/Amey-Thakur/DIGITAL-BOOKSTORE">View Source Code</a> ·
+                <a href="https://doi.org/10.22214/ijraset.2021.36609">Published Paper</a>
+            </p>
+            <p style="margin-top: 10px;">&copy; 2021 <a href="https://github.com/Amey-Thakur">Amey Thakur</a> & <a
+                    href="https://github.com/msatmod">Mega Satish</a></p>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#10094;</span>
+        <span class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#10095;</span>
+        <img id="lightbox-img" src="" alt="Expanded Image">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <a class="lightbox-download" id="lightbox-download" href="" download>⬇ Download Image</a>
+        <p class="lightbox-hint">Use ← → arrow keys to navigate · ESC to close</p>
+    </div>
+
+    <script>
+        // Collect all gallery images
+        const images = Array.from(document.querySelectorAll('.card img'));
+        let currentIndex = 0;
+
+        function openLightbox(img) {
+            currentIndex = images.indexOf(img);
+            showImage(currentIndex);
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function showImage(index) {
+            const img = images[index];
+            const lightboxImg = document.getElementById('lightbox-img');
+            const caption = document.getElementById('lightbox-caption');
+            const download = document.getElementById('lightbox-download');
+
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            caption.textContent = img.dataset.title || img.alt;
+            download.href = img.src;
+        }
+
+        function navigateLightbox(direction) {
+            event.stopPropagation();
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            showImage(currentIndex);
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function (e) {
+            const lightbox = document.getElementById('lightbox');
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
+
+        // Click outside image to close
+        document.getElementById('lightbox').addEventListener('click', function (e) {
+            if (e.target === this) closeLightbox();
+        });
+
+        // Theme toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.dataset.theme === 'dark') {
+                html.dataset.theme = 'light';
+                icon.textContent = '☀️';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.dataset.theme = 'dark';
+                icon.textContent = '🌙';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        (function () {
+            const saved = localStorage.getItem('theme');
+            if (saved === 'light') {
+                document.documentElement.dataset.theme = 'light';
+                document.getElementById('theme-icon').textContent = '☀️';
+            }
+        })();
+    </script>
+</body>
+
+</html>
