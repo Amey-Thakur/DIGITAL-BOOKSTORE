@@ -11,7 +11,7 @@
 
   A comprehensive web-based e-commerce platform facilitating seamless book discovery, secure user authentication, and persistent shopping cart management.
 
-  **[Source Code](Source%20Code/)** &nbsp;·&nbsp; **[Technical Specification](docs/SPECIFICATION.md)** &nbsp;·&nbsp; **[Video Demo](https://youtu.be/JuUix8olOC8)**
+  **[Source Code](Source%20Code/)** &nbsp;·&nbsp; **[Technical Specification](docs/SPECIFICATION.md)** &nbsp;·&nbsp; **[Video Demo](https://youtu.be/JuUix8olOC8)** &nbsp;·&nbsp; **[Live Demo](https://amey-thakur.github.io/DIGITAL-BOOKSTORE/)**
 
   [![Demo](https://img.youtube.com/vi/JuUix8olOC8/0.jpg)](https://youtu.be/JuUix8olOC8)
 
@@ -108,8 +108,8 @@ DIGITAL-BOOKSTORE/
 ├── docs/                                    # Formal Documentation
 │   └── SPECIFICATION.md                     # Technical Architecture & Specification
 │
-├── Mega/                                    # Media & Identity Assets
-│   ├── Filly.jpg                            # Project-related Content Asset
+├── Mega/                                    # Archival Attribution Assets
+│   ├── Filly.jpg                            # Companion (Filly)
 │   └── Mega.png                             # Author Profile Image (Mega Satish)
 │
 ├── Mini-Project/                            # Research & Academic Assets
@@ -318,7 +318,7 @@ Special thanks to the mentors and peers whose encouragement, discussions, and su
 
   <br>
 
-  🔬 **[Software Engineering Laboratory](https://github.com/Amey-Thakur/SOFTWARE-ENGINEERING-AND-SOFTWARE-ENGINEERING-LAB)** &nbsp;·&nbsp; 📚 **[Digital Bookstore](https://github.com/Amey-Thakur/DIGITAL-BOOKSTORE)**
+  🔬 **[Software Engineering Laboratory](https://github.com/Amey-Thakur/SOFTWARE-ENGINEERING-AND-SOFTWARE-ENGINEERING-LAB)** &nbsp;·&nbsp; 📚 **[Digital Bookstore](https://amey-thakur.github.io/DIGITAL-BOOKSTORE/)**
 
   ---
 
