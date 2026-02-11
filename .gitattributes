@@ -32,3 +32,13 @@ LICENSE text eol=lf
 # Academic/Scholarly classification
 *.md linguist-documentation
 *.xlsx linguist-documentation
+
+# Language Detection - Focus on Source Code
+docs/** linguist-vendored
+Mega/** linguist-vendored
+Mini-Project/** linguist-vendored
+CITATION.cff linguist-vendored
+codemeta.json linguist-vendored
+LICENSE linguist-vendored
+SECURITY.md linguist-vendored
+index.html linguist-vendored
