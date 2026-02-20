@@ -255,6 +255,13 @@ $con = mysqli_connect("localhost", "root", "", "digital_bookstore");
 ### 5. Launch
 Access the platform via your local gateway: [http://localhost/digital-bookstore/](http://localhost/digital-bookstore/)
 
+> [!TIP]
+> **Full-Stack Digital Bookstore E-Commerce Platform**
+>
+> Experience the IJRASET-published research simulation featuring a comprehensive full-stack e-commerce ecosystem, detailed UML system architecture, and robust relational database management optimized for scalable book discovery.
+>
+> [**Launch Live Demo**](https://amey-thakur.github.io/DIGITAL-BOOKSTORE/)
+
 ---
 
 <!-- =========================================================================================
