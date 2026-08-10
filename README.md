@@ -1,6 +1,5 @@
 <div align="center">
 
-  <a name="readme-top"></a>
   # Digital Bookstore
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
@@ -63,14 +62,14 @@ Developed as a mini-project for the **Software Engineering Laboratory** curricul
 
  ### Resources
 
- | # | Resource | Description | Date | Marks |
- |---|---|---|---|---|
- | 1 | [**Source Code**](Source%20Code/) | Complete web application source code | May 2021 | — |
- | 2 | [**Technical Specification**](docs/SPECIFICATION.md) | System architecture and specifications | May 2021 | — |
- | 3 | [**Project Timeline**](Mini-Project/Amey_B-50_Software_Engineering_Mini_Project_Timeline.pdf) | Execution schedule and milestones | March 2021 | — |
- | 4 | [**Publication Certificate**](Mini-Project/IJRASET36609%20-%20Digital%20Bookstore.pdf) | Recognition for project excellence | July 2021 | — |
- | 5 | [**Project Diagrams**](Mini-Project/Figures/) | Planning and architectural visualizations | May 2021 | — |
- | 6 | [**Software Engineering Lab**](https://github.com/Amey-Thakur/SOFTWARE-ENGINEERING-AND-SOFTWARE-ENGINEERING-LAB) | Computer Engineering Laboratory Repository | — | — |
+| # | Resource | Description | Date | Marks |
+|---|---|---|---|---|
+| 1 | [**Source Code**](Source%20Code/) | Complete web application source code | May 2021 | — |
+| 2 | [**Technical Specification**](docs/SPECIFICATION.md) | System architecture and specifications | May 2021 | — |
+| 3 | [**Project Timeline**](Mini-Project/Amey_B-50_Software_Engineering_Mini_Project_Timeline.pdf) | Execution schedule and milestones | March 2021 | — |
+| 4 | [**Publication Certificate**](Mini-Project/IJRASET36609%20-%20Digital%20Bookstore.pdf) | Recognition for project excellence | July 2021 | — |
+| 5 | [**Project Diagrams**](Mini-Project/Figures/) | Planning and architectural visualizations | May 2021 | — |
+| 6 | [**Software Engineering Lab**](https://github.com/Amey-Thakur/SOFTWARE-ENGINEERING-AND-SOFTWARE-ENGINEERING-LAB) | Computer Engineering Laboratory Repository | — | — |
 
 > [!TIP]
 > **Database Interaction Efficiency**
@@ -216,7 +215,7 @@ DIGITAL-BOOKSTORE/
 
 ### 1. Prerequisites
 Ensure your local development environment meets the following requirements:
-- **Web Server**: Apache (via [XAMPP](https://www.apachefriends.org/index.html) or [WAMP](http://www.wampserver.com/en/)).
+- **Web Server**: Apache (via [XAMPP](https://www.apachefriends.org/index.html) or [WAMP](https://sourceforge.net/projects/wampserver/)).
 - **PHP**: Version **7.x** or higher.
 - **Database**: MySQL **5.x** or higher.
 - **Browser**: Current production-grade web browser (Chrome, Firefox, Safari).
@@ -319,7 +318,7 @@ Special thanks to the mentors and peers whose encouragement, discussions, and su
 <!-- FOOTER -->
 <div align="center">
 
-  [↑ Back to Top](#readme-top)
+  [↑ Back to Top](#digital-bookstore)
 
   [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Features](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Results](#system-architecture--design-gallery) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
