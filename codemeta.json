@@ -35,8 +35,10 @@
             }
         }
     ],
+    "dateCreated": "2021-06-29",
     "dateReleased": "2021-08-28",
     "codeRepository": "https://github.com/Amey-Thakur/DIGITAL-BOOKSTORE",
+    "isPartOf": "https://github.com/Amey-Thakur/COMPUTER-ENGINEERING",
     "developmentStatus": "complete",
     "runtimePlatform": [
         "XAMPP",
@@ -51,6 +53,33 @@
         "MySQL",
         "Computer Engineering",
         "Mini Project",
-        "Standardized"
-    ]
+        "Standardized",
+        "Computer Science",
+        "CSS",
+        "Digital Bookstore",
+        "Ecommerce",
+        "Engineering",
+        "HTML",
+        "JavaScript",
+        "Online Bookstore",
+        "Research Paper",
+        "Shopping Cart",
+        "Software Engineering",
+        "University Of Mumbai",
+        "University of Mumbai",
+        "Mumbai University",
+        "Terna Engineering College",
+        "Navi Mumbai",
+        "India",
+        "B.E. Computer Engineering",
+        "Semester VI",
+        "Amey Thakur",
+        "amey",
+        "ameythakur",
+        "amey-thakur",
+        "ameyarc",
+        "Mega Satish",
+        "megasatish"
+    ],
+    "url": "https://amey-thakur.github.io/DIGITAL-BOOKSTORE/"
 }
